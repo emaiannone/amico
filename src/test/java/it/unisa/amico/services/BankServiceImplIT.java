@@ -5,14 +5,11 @@ import it.unisa.amico.domain.BankAccount;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.AutoConfigureDataJpa;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest
 class BankServiceImplIT {
@@ -40,6 +37,7 @@ class BankServiceImplIT {
         bankAccountDao.save(new BankAccount("Test2", 10.0));
         List<BankAccount> accounts = bankService.getAllBankAccounts();
         System.out.println(accounts);
+        // assertEquals(3, accounts.size());
         assertEquals(2, accounts.size());
     }
 
