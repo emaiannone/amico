@@ -5,7 +5,6 @@ import it.unisa.amico.domain.BankAccount;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -15,9 +14,13 @@ public class BankServiceImpl implements BankService {
 
     private final BankAccountDao bankAccountDao;
 
+    public BankServiceImpl(BankAccountDao bankAccountDao) {
+        this.bankAccountDao = bankAccountDao;
+    }
+
     @Override
     public List<BankAccount> getAllBankAccounts() {
-        return new ArrayList<>(bankAccountDao.findAll());
+        return null;/*ArrayList<>(bankAccountDao.findAll()*/
     }
 
     @Override
