@@ -11,7 +11,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.when;
 
 @SpringBootTest
@@ -38,8 +39,8 @@ class BankServiceImplTest {
     void getAllBankAccounts() {
         when(bankAccountDao.findAll()).thenReturn(new ArrayList<>());
         List<BankAccount> accounts1 = bankService.getAllBankAccounts();
-        assertFalse(accounts1.isEmpty());
-        // assertTrue(accounts1.isEmpty());
+        // assertFalse(accounts1.isEmpty());
+        assertTrue(accounts1.isEmpty());
     }
 
     @Test
