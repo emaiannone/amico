@@ -37,8 +37,8 @@ class BankServiceImplIT {
         bankAccountDao.save(new BankAccount("Test2", 10.0));
         List<BankAccount> accounts = bankService.getAllBankAccounts();
         System.out.println(accounts);
-        // assertEquals(3, accounts.size());
-        assertEquals(2, accounts.size());
+        assertEquals(3, accounts.size());
+        // assertEquals(2, accounts.size());
     }
 
     @Test
