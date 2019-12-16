@@ -38,8 +38,8 @@ class BankServiceImplTest {
     void getAllBankAccounts() {
         when(bankAccountDao.findAll()).thenReturn(new ArrayList<>());
         List<BankAccount> accounts1 = bankService.getAllBankAccounts();
-        assertFalse(accounts1.isEmpty());
-        // assertTrue(accounts1.isEmpty());
+        // assertFalse(accounts1.isEmpty());
+        assertTrue(accounts1.isEmpty());
     }
 
     @Test
