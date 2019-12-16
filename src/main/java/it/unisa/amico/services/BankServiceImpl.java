@@ -60,7 +60,7 @@ public class BankServiceImpl implements BankService {
         }
         account.setBalance(account.getBalance() + amount);
         bankAccountDao.save(account);
-        return account.getBalance();
+        return null;//account.getBalance();
     }
 
     public void transfer(Long id1, Long id2, Double amount) {
